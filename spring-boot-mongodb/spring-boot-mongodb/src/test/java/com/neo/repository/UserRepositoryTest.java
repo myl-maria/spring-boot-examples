@@ -1,6 +1,7 @@
 package com.neo.repository;
 
 import com.neo.model.User;
+import com.neo.model.UserDuplicate;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +16,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class UserRepositoryTest {
 
     @Autowired
-    private UserRepository userDao;
+    private UserDupRepository userDao;
 
     @Test
     public void testSaveUser() throws Exception {
-        User user=new User();
-        user.setId(2l);
-        user.setUserName("小明");
+        UserDuplicate user=new UserDuplicate();
+        user.setId(3l);
+        user.setUserName("小红");
         user.setPassWord("fffooo123");
         userDao.saveUser(user);
     }
